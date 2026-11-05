@@ -1,0 +1,29 @@
+[package]
+name = "solgov"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "solgov"
+
+[features]
+default = []
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+cpi = ["no-entrypoint"]
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = "1.2.2"
+anchor-spl = { version = "1.2.2", features = ["token"] }
+
+[dev-dependencies]
+solana-program-test = "3.1.1"
+solana-sdk = "3.0.0"
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread"] }

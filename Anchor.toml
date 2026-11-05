@@ -1,0 +1,13 @@
+[toolchain]
+anchor_version = "1.2.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+solgov = "EPhYz9toHQfnd5L61WjvYa9M3fPQ1BwyeVAEYY1XbepC"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
